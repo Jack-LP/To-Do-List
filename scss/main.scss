@@ -1,0 +1,123 @@
+@import "variables";
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: $bgGradient;
+    color: white;
+    font-family: $bodyFont;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, 
+form{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+form input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+form button{
+    color: #85c7de;
+    background-color: white;
+    cursor: pointer;
+    transition: color .3s ease, background-color .3s ease;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+form button:hover{
+    background-color: #85c7de;
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: .5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: text-decoration 1s ease, opacity .5s ease, transform .5s ease;
+    border-radius: 10px;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn{
+    background-color: #f48498;
+    color: #333;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background-color: #acd8aa;
+}
+
+.trash-btn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.todo-item{
+    padding: 0 .5rem;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
